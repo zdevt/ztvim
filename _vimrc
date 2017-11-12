@@ -106,14 +106,14 @@
   map <F7> :call CompileRun()<CR>
 
   func! CompileRun()
-  exec "w"
-  if &filetype == 'c'
-    exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
-  elseif &filetype == 'cpp'
-    exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
-  elseif &filetype == 'python'
-    exec "!time python3 %"
-  endif
+    exec "w"
+    if &filetype == 'c'
+      exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
+    elseif &filetype == 'cpp'
+      exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
+    elseif &filetype == 'python'
+      exec "!time python3 %"
+    endif
   endfunc
 "}
 
@@ -227,8 +227,6 @@
     nnoremap <silent> <leader>tt :TagbarToggle<CR>
   endif
 "}
-
-
 
 
 
