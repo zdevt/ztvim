@@ -120,7 +120,7 @@
 "format code
 "{
   "nmap F :!astyle_sh -cs2CSKNwYMm2pPDHk1n % >/dev/null <CR>
-  nmap F :!/bin/astyle_sh % <CR>
+  nmap F :!~/.vim/astyle_sh % <CR>
 "}
 
 "UndoTree 
