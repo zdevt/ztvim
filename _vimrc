@@ -226,7 +226,7 @@
 
   autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.sh exec ":call SetTitle()"
 
-  func SetCommitCommon()
+  func SetFileHeader()
     call append(line("$"),"/*")
     call append(line("$")," * ==============================================================================")
     call append(line("$")," *")
@@ -249,7 +249,6 @@
   endfunc
 
   func SetCommitSh()
-    call setline(1,"#!/bin/sh")
     call append(line("$"),"#       FileName:  ".expand("%:t"))
     call append(line("$"),"#")
     call append(line("$"),"#    Description:")
@@ -265,12 +264,7 @@
     call append(line("$"),"")
   endfunc
 
-  func SetCommitC()
-    call append(line("$"),"#include <stdio.h>")
-    call append(line("$"),"#include <stdlib.h>")
-    call append(line("$"),"#include <stdint.h>")
-    call append(line("$"),"")
-    call append(line("$"),"")
+  func SetCMain()
     call append(line("$"),"int main(int argc, char* argv[])")
     call append(line("$"),"{")
     call append(line("$"),"  (void)argc;")
@@ -282,7 +276,15 @@
     call append(line("$"),"")
   endfunc
 
-  func SetCommitH()
+  func SetInclude()
+    call append(line("$"),"#include <stdio.h>")
+    call append(line("$"),"#include <stdlib.h>")
+    call append(line("$"),"#include <stdint.h>")
+    call append(line("$"),"")
+    call append(line("$"),"")
+  endfunc
+
+  func SetIncludeFileBody()
     call append(line("$"),"")
     call append(line("$"),"#ifndef ".toupper(expand("%:t:r"))."_INC" )
     call append(line("$"),"#define ".toupper(expand("%:t:r"))."_INC" )
@@ -299,15 +301,21 @@
 
   func SetTitle()
     if expand("%:e") == 'c' 
-      call SetCommitCommon()
-      call SetCommitC()
+      call SetFileHeader()
+      call SetInclude()
+      call SetCMain()
     elseif expand("%:e") == 'sh'
+      call setline(1,"#!/bin/sh")
+      call SetCommitSh()
+    elseif expand("%:e") == 'py'
+      call setline(1,"#!/usr/bin/env python")
+      call append(line("$"),"#-*- coding:utf-8 -*-")
       call SetCommitSh()
     elseif expand("%:e") == 'cpp'
-      call SetCommitCommon()
+      call SetFileHeader()
     elseif expand("%:e") == 'h'
-      call SetCommitCommon()
-      call SetCommitH()
+      call SetFileHeader()
+      call SetIncludeFileBody()
     endif
   endfunc 
 
