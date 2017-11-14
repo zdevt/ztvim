@@ -22,6 +22,9 @@ then
   echo "Linux"
 elif [ $SYSTYPE = "Darwin" ];
 then 
-  echo "Mac"
+  sudo \cp ./astyle_mac ~/.vim/astyle
+  sudo \cp ./astyle_mac_sh ~/.vim/astyle_sh
+else 
+  echo "Linux"
 fi
 
