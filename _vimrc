@@ -64,6 +64,8 @@
   Plugin 'tpope/vim-surround'
   "<leader>c<space>
   Plugin 'scrooloose/nerdcommenter'
+  "<leader>e
+  Plugin 'scrooloose/nerdtree'
 
   "Plugin 'mileszs/ack.vim'
   "Plugin 'vim-airline/vim-airline'
@@ -81,7 +83,6 @@
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'vim-syntastic/syntastic'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'scrooloose/nerdtree'
 
   call vundle#end()
   filetype plugin indent on
@@ -204,21 +205,49 @@
 "ctags cscope
 "{
   "Ctrl-] 跳转光标所在定义， Ctrl+t 回到上次跳转前的位置
-  "生成ctags cscope文件
   let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
-  map <silent> <leader>cts :call GenTags()<CR>
+  map <silent> <leader>ct :call GenTags()<CR>
   func! GenTags()
-  exec "w"
-  exec "!find . -name \"*.h\" -o -name \"*.c\" -o -name \"*.hpp\" -o -name \"*.cpp\" -o -name \"*.cc\" > cscope.files"
-  exec "!cscope -Rbq -i cscope.files"
-  exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
-  exec "cs kill -1"
-  exec "cs add cscope.out"
+    exec "w"
+    exec ":silent !find . -name \"*.h\" -o -name \"*.c\" -o -name \"*.hpp\" -o -name \"*.cpp\" -o -name \"*.cc\" > cscope.files"
+    exec ":silent !cscope -Rbq -i cscope.files"
+    exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+    exec "cs kill -1"
+    exec "cs add cscope.out"
   endfunc
+
+  "查找本c符号，跳过注释
+  "nmap cfs :cs find s <C-R>=expand("<cword>")<CR><CR>
+  "查找本定义
+  "nmap cfg :cs find g <C-R>=expand("<cword>")<CR><CR>
+  "查找本函数调用的函数
+  "nmap cfd :cs find d <C-R>=expand("<cword>")<CR><CR>
+  "查找调用本函数的函数
+  "nmap cfc :cs find c <C-R>=expand("<cword>")<CR><CR>
+  "查找本字符串
+  "nmap cft :cs find t <C-R>=expand("<cword>")<CR><CR>
+  "查找本egrep模式
+  "nmap cfe :cs find e <C-R>=expand("<cword>")<CR><CR>
+  "查找本文件
+  "nmap cff :cs find f <C-R>=expand("<cfile>")<CR><CR>  
+  "查找包含本文件的文件
+  "nmap cfi :cs find i <C-R>=expand("<cword>")<CR><CR>  
+  "
 
   set cscopequickfix=s-,c-,d-,i-,t-,e-
 "}
 
+" NerdTree 
+"{
+  map<leader>e :NERDTreeFind<CR>
+  let NERDTreeShowBookmarks=1
+  let NERDTreeIgnore=['\.py[cd]$','\~$','\.swp$','^\.git$','^\.hg$','^\.svn$','\.bzr$']
+  let NERDTreeChDirMode=0
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeMouseMode=2
+  let NERDTreeShowHidden=1
+  let NERDTreeKeepTreeInNewTab=1
+"}
 
 "auto add source code header --start  
 "{
