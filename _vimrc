@@ -138,34 +138,6 @@
   "git config --global mergetool.prompt false
 "}
 
-"auto add pyhton header --start  
-"python
-"{
-  let python_highlight_all=1
-
-  autocmd BufNewFile *.py 0r ~/.vim/vim_template/vim_python_header
-  autocmd BufNewFile *.py ks|call FileName()|'s  
-  autocmd BufNewFile *.py ks|call CreatedTime()|'s  
-    
-  fun FileName()  
-    if line("$") > 10  
-        let l = 10  "这里是字母L 不是数字1   
-    else  
-        let l = line("$")  
-    endif   
-    exe "1," . l . "g/File Name:.*/s/File Name:.*/File Name: " .expand("%")    
-  endfun   
-    
-  fun CreatedTime()  
-    if line("$") > 10  
-        let l = 10  
-    else  
-        let l = line("$")  
-    endif   
-    exe "1," . l . "g/Created Time:.*/s/Created Time:.*/Created Time: " .strftime("%Y-%m-%d %T")   
-  endfun   
-"}
-"auto add python header --end  
 
 "ctrlp
 "{
@@ -246,4 +218,41 @@
 
   set cscopequickfix=s-,c-,d-,i-,t-,e-
 "}
+
+
+"auto add source code header --start  
+"{
+  let python_highlight_all=1
+
+  autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.sh exec ":call SetTitle()"
+
+  func SetCommitC()
+    call setline(1,          "/*")
+    call append(line("."),   " * ====================================================================================")
+    call append(line(".")+1, " *")
+    call append(line(".")+2, " *       FileName:".expand("%:t"))
+    call append(line(".")+3, " *")
+    call append(line(".")+4, " *    Description:")
+    call append(line(".")+5, " *")
+    call append(line(".")+6, " *        Version:  1.0")
+    call append(line(".")+7, " *        Created:".strftime("%Y-%m-%d %T"))
+    call append(line(".")+8, " *  Last Modified:")
+    call append(line(".")+9, " *       Revision:  none")
+    call append(line(".")+10," *       Compiler:  gcc")
+    call append(line(".")+11," *")
+    call append(line(".")+12," *         Author:  zt ()")
+    call append(line(".")+13," *   Organization:")
+    call append(line(".")+14," *")
+    call append(line(".")+15," * =====================================================================================")
+    call append(line(".")+16," */")
+  endfunc
+
+  func SetTitle()
+    if &filetype == 'c' 
+      call SetCommitC()
+    endif
+  endfunc 
+
+"}
+"auto add source code header --end  
 
