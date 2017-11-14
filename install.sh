@@ -19,7 +19,8 @@ SYSTYPE=`uname`
 
 if [ $SYSTYPE = "Linux" ];
 then 
-  echo "Linux"
+  sudo \cp ./astyle ~/.vim/astyle
+  sudo \cp ./astyle_sh ~/.vim/astyle_sh
 elif [ $SYSTYPE = "Darwin" ];
 then 
   sudo \cp ./astyle_mac ~/.vim/astyle
