@@ -14,14 +14,14 @@ if [ $SYSTYPE = "Linux" ];
 then 
   sudo chmod +x astyle
   sudo chmod +x astyle_sh
-  sudo \cp ./astyle ~/.vim/astyle
   sudo \cp ./astyle_sh ~/.vim/astyle_sh
+  sudo \cp ./astyle ~/.vim/astyle
 elif [ $SYSTYPE = "Darwin" ];
 then 
   sudo chmod +x astyle_mac
-  sudo chmod +x astyle_mac_sh
+  sudo chmod +x astyle_sh
+  sudo \cp ./astyle_sh ~/.vim/astyle_sh
   sudo \cp ./astyle_mac ~/.vim/astyle
-  sudo \cp ./astyle_mac_sh ~/.vim/astyle_sh
 else 
   echo "Linux"
 fi

@@ -6,7 +6,7 @@ if   [ "${filename#*.}" = "c" ] || [ "${filename#*.}" = "cpp" ] \
   || [ "${filename#*.}" = "h" ] || [ "${filename#*.}" = "hpp" ] ;
 then
 #/bin/astyle -cs2CSKNwYMm2pPDHk1n $filename  >/dev/null
-	/bin/astyle --style=allman \
+	~/.vim/astyle --style=allman \
 			 				--indent=spaces=2 \
 			 				--indent-modifiers \
 							--indent-classes \
