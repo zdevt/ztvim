@@ -265,6 +265,8 @@
   endfunc
 
   func SetCMain()
+    call append(line("$"),"")
+    call append(line("$"),"")
     call append(line("$"),"int main(int argc, char* argv[])")
     call append(line("$"),"{")
     call append(line("$"),"  (void)argc;")
@@ -280,8 +282,10 @@
     call append(line("$"),"#include <stdio.h>")
     call append(line("$"),"#include <stdlib.h>")
     call append(line("$"),"#include <stdint.h>")
-    call append(line("$"),"")
-    call append(line("$"),"")
+  endfunc
+
+  func SetCppInclude()
+    call append(line("$"),"#include <iostream>")
   endfunc
 
   func SetIncludeFileBody()
@@ -292,6 +296,11 @@
     call append(line("$"),"")
     call append(line("$"),"class ".expand("%:t:r"))
     call append(line("$"),"{")
+    call append(line("$"),"public:")
+    call append(line("$"),"  ".expand("%:t:r")."();")
+    call append(line("$"),"  virtual ~".expand("%:t:r")."();")
+    call append(line("$"),"")
+    call append(line("$"),"private:")
     call append(line("$"),"")
     call append(line("$"),"};")
     call append(line("$"),"")
@@ -313,6 +322,8 @@
       call SetCommitSh()
     elseif expand("%:e") == 'cpp'
       call SetFileHeader()
+      call SetCppInclude()
+      call SetCMain()
     elseif expand("%:e") == 'h'
       call SetFileHeader()
       call SetIncludeFileBody()
