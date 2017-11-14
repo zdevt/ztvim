@@ -229,4 +229,21 @@
 "}
 
 
+"ctags cscope
+"{
+  "Ctrl-] 跳转光标所在定义， Ctrl+t 回到上次跳转前的位置
+  "生成ctags cscope文件
+  let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+  map <silent> <leader>cts :call GenTags()<CR>
+  func! GenTags()
+  exec "w"
+  exec "!find . -name \"*.h\" -o -name \"*.c\" -o -name \"*.hpp\" -o -name \"*.cpp\" -o -name \"*.cc\" > cscope.files"
+  exec "!cscope -Rbq -i cscope.files"
+  exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+  exec "cs kill -1"
+  exec "cs add cscope.out"
+  endfunc
+
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
+"}
 
