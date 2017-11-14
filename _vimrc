@@ -246,7 +246,6 @@
     call append(line("$")," * ===============================================================================")
     call append(line("$")," */")
     call append(line("$"),"")
-    call append(line("$"),"")
   endfunc
 
   func SetCommitSh()
@@ -285,21 +284,26 @@
 
   func SetCommitH()
     call append(line("$"),"")
-    call append(line("$"),"#ifndef ".toupper(expand("%:t:r")) )
-    call append(line("$"),"#define ".toupper(expand("%:t:r")) )
+    call append(line("$"),"#ifndef ".toupper(expand("%:t:r"))."_INC" )
+    call append(line("$"),"#define ".toupper(expand("%:t:r"))."_INC" )
     call append(line("$"),"")
     call append(line("$"),"")
-    call append(line("$"),"#endif //".toupper(expand("%:t:r")) )
+    call append(line("$"),"class ".expand("%:t:r"))
+    call append(line("$"),"{")
+    call append(line("$"),"")
+    call append(line("$"),"};")
+    call append(line("$"),"")
+    call append(line("$"),"#endif //".toupper(expand("%:t:r"))."_INC" )
     call append(line("$"),"")
   endfunc
 
   func SetTitle()
-    if &filetype == 'c' 
+    if expand("%:e") == 'c' 
       call SetCommitCommon()
       call SetCommitC()
-    elseif &filetype == 'sh'
+    elseif expand("%:e") == 'sh'
       call SetCommitSh()
-    elseif &filetype == 'cpp'
+    elseif expand("%:e") == 'cpp'
       call SetCommitCommon()
     elseif expand("%:e") == 'h'
       call SetCommitCommon()
