@@ -72,8 +72,8 @@
   "Plugin 'powerline/fonts'
   "Plugin 'powerline/powerline'
   Plugin 'vim-airline/vim-airline'
+  Plugin 'godlygeek/tabular'
 
-  "Plugin 'godlygeek/tabular'
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
 
@@ -269,12 +269,10 @@
 
 " tabular
 "{
-  "let g:multi_cursor_start_key='<C-n>'
-  "let g:multi_cursor_start_word_key='g<C-n>'
-  "let g:multi_cursor_next_key='<C-n>'
-  "let g:multi_cursor_prev_key='<C-p>'
-  "let g:multi_cursor_skip_key='<C-x>'
-  "let g:multi_cursor_quit_key='<Esc>'
+  nmap <leader>a= :Tabularize /=<CR>
+  vmap <leader>a= :Tabularize /=<CR>
+  "nmap <leader>a: :Tabularize /:\zs<CR>
+  "vmap <leader>a: :Tabularize /:\zs<CR>
 "}
 
 "auto add source code header --start  
