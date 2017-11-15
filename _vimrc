@@ -1,4 +1,4 @@
-"
+" vim config
 "{
   set nocompatible
   filetype off
@@ -66,6 +66,8 @@
   Plugin 'scrooloose/nerdcommenter'
   "<leader>e
   Plugin 'scrooloose/nerdtree'
+  " TimeStamp
+  Plugin 'TimeStamp.vim'
 
   "Plugin 'mileszs/ack.vim'
   "Plugin 'vim-airline/vim-airline'
@@ -249,6 +251,13 @@
   let NERDTreeKeepTreeInNewTab=1
 "}
 
+" TimeStamp.vim
+"{
+  let timestamp_regexp = '\v\C%(<Last %([cC]hanged?|[Mm]odified):\s+)@<=.*$'
+  set modelines=30
+  let g:timestamp_rep = ' %Y-%m-%d %T'
+"}
+
 "auto add source code header --start  
 "{
   let python_highlight_all=1
@@ -265,7 +274,7 @@
     call append(line("$")," *")
     call append(line("$")," *        Version:  1.0")
     call append(line("$")," *        Created:  ".strftime("%Y-%m-%d %T"))
-    call append(line("$")," *  Last Modified:")
+    call append(line("$")," *  Last Modified:  TIMESTAMP")
     call append(line("$")," *       Revision:  none")
     call append(line("$")," *       Compiler:  gcc")
     call append(line("$")," *")
@@ -284,7 +293,7 @@
     call append(line("$"),"#")
     call append(line("$"),"#        Version:  1.0")
     call append(line("$"),"#        Created:  ".strftime("%Y-%m-%d %T"))
-    call append(line("$"),"#  Last Modified:")
+    call append(line("$"),"#  Last Modified:  TIMESTAMP")
     call append(line("$"),"#       Revision:  none")
     call append(line("$"),"#       Compiler:  gcc")
     call append(line("$"),"#")
