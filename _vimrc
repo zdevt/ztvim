@@ -66,16 +66,17 @@
   Plugin 'scrooloose/nerdcommenter'
   "<leader>e
   Plugin 'scrooloose/nerdtree'
-  " TimeStamp
+  "TimeStamp
   Plugin 'TimeStamp.vim'
-  "Plugin 'python.vim'
-  "Plugin 'powerline/fonts'
-  "Plugin 'powerline/powerline'
   Plugin 'vim-airline/vim-airline'
+  "<leader>a=
   Plugin 'godlygeek/tabular'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
+  "Plugin 'python.vim'
+  "Plugin 'powerline/fonts'
+  "Plugin 'powerline/powerline'
 
   Plugin 'vim-scripts/indentpython.vim'
   Plugin 'plasticboy/vim-markdown'
@@ -83,9 +84,10 @@
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
+  Plugin 'vim-syntastic/syntastic'
+
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
-  Plugin 'vim-syntastic/syntastic'
   Plugin 'tpope/vim-fugitive'
 
   call vundle#end()
