@@ -10,17 +10,16 @@ sudo rm -rf ~/.vim*
 sudo ln -s $PWD/_vimrc ~/.vimrc
 sudo ln -s $PWD/_vim ~/.vim
 
+sudo chmod +x astyle_sh
+sudo \cp ./astyle_sh ~/.vim/astyle_sh
+
 if [ $SYSTYPE = "Linux" ];
 then 
   sudo chmod +x astyle
-  sudo chmod +x astyle_sh
-  sudo \cp ./astyle_sh ~/.vim/astyle_sh
   sudo \cp ./astyle ~/.vim/astyle
 elif [ $SYSTYPE = "Darwin" ];
 then 
   sudo chmod +x astyle_mac
-  sudo chmod +x astyle_sh
-  sudo \cp ./astyle_sh ~/.vim/astyle_sh
   sudo \cp ./astyle_mac ~/.vim/astyle
 else 
   echo "Linux"

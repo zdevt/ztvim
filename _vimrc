@@ -311,10 +311,18 @@
     call append(line("$"),"#include <stdio.h>")
     call append(line("$"),"#include <stdlib.h>")
     call append(line("$"),"#include <stdint.h>")
+    call append(line("$"),"#include <stddef.h>")
+    call append(line("$"),"#include <errno.h>")
   endfunc
 
   func SetCppInclude()
+    call append(line("$"),"")
     call append(line("$"),"#include <iostream>")
+    call append(line("$"),"#include <memory>")
+    call append(line("$"),"#include <algorithm>")
+    call append(line("$"),"#include <vector>")
+    call append(line("$"),"#include <map>")
+    call append(line("$"),"#include <string>")
   endfunc
 
   func SetIncludeFileBody()
@@ -333,7 +341,7 @@
     call append(line("$"),"")
     call append(line("$"),"};")
     call append(line("$"),"")
-    call append(line("$"),"#endif //".toupper(expand("%:t:r"))."_INC" )
+    call append(line("$"),"#endif /*  ".toupper(expand("%:t:r"))."_INC  */" )
     call append(line("$"),"")
   endfunc
 
@@ -351,6 +359,7 @@
       call SetCommitSh()
     elseif expand("%:e") == 'cpp'
       call SetFileHeader()
+      call SetInclude()
       call SetCppInclude()
       call SetCMain()
     elseif expand("%:e") == 'h'
