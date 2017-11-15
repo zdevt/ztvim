@@ -68,19 +68,21 @@
   Plugin 'scrooloose/nerdtree'
   " TimeStamp
   Plugin 'TimeStamp.vim'
-
-  "Plugin 'mileszs/ack.vim'
-  "Plugin 'vim-airline/vim-airline'
+  "Plugin 'python.vim'
   "Plugin 'powerline/fonts'
+  "Plugin 'powerline/powerline'
+  Plugin 'vim-airline/vim-airline'
+
+  "Plugin 'godlygeek/tabular'
+  "Plugin 'terryma/vim-multiple-cursors'
+  "Plugin 'mileszs/ack.vim'
 
   Plugin 'vim-scripts/indentpython.vim'
-  Plugin 'godlygeek/tabular'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'MarcWeber/vim-addon-mw-utils'
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
-  Plugin 'terryma/vim-multiple-cursors'
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'vim-syntastic/syntastic'
@@ -122,17 +124,13 @@
 
 "format code
 "{
-  "nmap F :!astyle_sh -cs2CSKNwYMm2pPDHk1n % >/dev/null <CR>
   nmap F :!~/.vim/astyle_sh % <CR>
 "}
 
 "UndoTree 
 "{
-  if isdirectory(expand("~/.vim/bundle/undotree/"))
-    nnoremap <Leader>u :UndotreeToggle<CR>
-    "If undotree is opened, it is likely one wants to interact with it.
-    let g:undotree_SetFocusWhenToggle=1
-  endif
+  nnoremap <Leader>u :UndotreeToggle<CR>
+  let g:undotree_SetFocusWhenToggle=1
 "}
 
 "git
@@ -198,9 +196,7 @@
 
 "TagBar 
 "{
-  if isdirectory(expand("~/.vim/bundle/tagbar/"))
-    nnoremap <silent> <leader>tt :TagbarToggle<CR>
-  endif
+  nnoremap <silent> <leader>tt :TagbarToggle<CR>
 "}
 
 
@@ -254,8 +250,31 @@
 " TimeStamp.vim
 "{
   let timestamp_regexp = '\v\C%(<Last %([cC]hanged?|[Mm]odified):\s+)@<=.*$'
-  set modelines=30
+  set modelines=20
   let g:timestamp_rep = ' %Y-%m-%d %T'
+"}
+
+" powerline
+"{
+  "set guifont=PowerlineSymbols\ for\ Powerline 
+  "set nocompatible
+  "set t_Co=256
+  "let g:Powerline_symbols='fancy'
+"}
+
+" vim-airline
+"{
+  "let g:airline_powerline_fonts=1
+"}
+
+" tabular
+"{
+  "let g:multi_cursor_start_key='<C-n>'
+  "let g:multi_cursor_start_word_key='g<C-n>'
+  "let g:multi_cursor_next_key='<C-n>'
+  "let g:multi_cursor_prev_key='<C-p>'
+  "let g:multi_cursor_skip_key='<C-x>'
+  "let g:multi_cursor_quit_key='<Esc>'
 "}
 
 "auto add source code header --start  
