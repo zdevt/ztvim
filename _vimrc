@@ -71,6 +71,7 @@
   Plugin 'vim-airline/vim-airline'
   "<leader>a=
   Plugin 'godlygeek/tabular'
+  Plugin 'vim-syntastic/syntastic'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
@@ -84,7 +85,6 @@
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
-  Plugin 'vim-syntastic/syntastic'
 
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
@@ -275,6 +275,18 @@
   vmap <leader>a= :Tabularize /=<CR>
   "nmap <leader>a: :Tabularize /:\zs<CR>
   "vmap <leader>a: :Tabularize /:\zs<CR>
+"}
+
+" syntastic
+"{
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
 "}
 
 "auto add source code header --start  
