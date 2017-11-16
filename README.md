@@ -13,6 +13,10 @@ cd ~/.vim/bundle
 
 git clone https://github.com/VundleVim/Vundle.vim.git
 
+open vim:
+:pluginInstall 
+waitting
+
 cd ~/.vim/bundle/YouCompleteMe
 
 ./install.py --clang-completer
