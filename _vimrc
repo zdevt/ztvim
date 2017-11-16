@@ -75,6 +75,7 @@
   Plugin 'godlygeek/tabular'
   "check c code
   Plugin 'vim-syntastic/syntastic'
+  "Plugin 'vim-scripts/DoxygenToolkit.vim'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
@@ -279,6 +280,13 @@
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
 "}
+
+
+"DoxygenToolkit
+"{
+  
+"}
+
 
 "auto add source code header --start  
 "{
