@@ -115,7 +115,7 @@
 "{
   "make
   nmap M :make<CR>
-  map <F7> :call CompileRun()<CR>
+  nnoremap <leader>r :call CompileRun()<CR>
 
   func! CompileRun()
     exec "w"
@@ -226,7 +226,7 @@
 
 " NerdTree 
 "{
-  map<leader>e :NERDTreeFind<CR>
+  noremap<leader>e :NERDTreeFind<CR>
   let NERDTreeShowBookmarks=1
   let NERDTreeIgnore=['\.py[cd]$','\~$','\.swp$','^\.git$','^\.hg$','^\.svn$','\.bzr$']
   let NERDTreeChDirMode=0
