@@ -255,7 +255,7 @@
 " vim-airline
 "{
   "let g:airline_powerline_fonts=1
-  let g:airline_theme='silver'
+  let g:airline_theme='simple'
 "}
 
 " tabular
