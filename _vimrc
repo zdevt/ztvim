@@ -71,6 +71,7 @@
   Plugin 'TimeStamp.vim'
   "StatusBar
   Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
   "<leader>a=
   Plugin 'godlygeek/tabular'
   "check c code
@@ -254,6 +255,7 @@
 " vim-airline
 "{
   "let g:airline_powerline_fonts=1
+  let g:airline_theme='silver'
 "}
 
 " tabular
