@@ -78,6 +78,7 @@
   Plugin 'vim-syntastic/syntastic'
   "Plugin 'vim-scripts/DoxygenToolkit.vim'
   Plugin 'rdnetto/YCM-Generator'
+  Plugin 'octol/vim-cpp-enhanced-highlight'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
