@@ -76,6 +76,7 @@
   "check c code
   Plugin 'vim-syntastic/syntastic'
   "Plugin 'vim-scripts/DoxygenToolkit.vim'
+  Plugin 'rdnetto/YCM-Generator'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
@@ -287,6 +288,11 @@
   
 "}
 
+" YCM-Generator
+"{
+
+
+"}
 
 "auto add source code header --start  
 "{
