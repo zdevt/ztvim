@@ -290,8 +290,7 @@
 
 " YCM-Generator
 "{
-
-
+  nnoremap <Leader>y :YcmGenerateConfig<CR>
 "}
 
 "auto add source code header --start  
