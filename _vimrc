@@ -306,7 +306,7 @@
 
   func SetFileHeader()
     call append(line("$"),"/*")
-    call append(line("$")," * ==============================================================================")
+    call append(line("$")," * =========================================================================")
     call append(line("$")," *")
     call append(line("$")," *       FileName:  ".expand("%:t"))
     call append(line("$")," *")
@@ -321,7 +321,7 @@
     call append(line("$")," *         Author:  zt ()")
     call append(line("$")," *   Organization:")
     call append(line("$")," *")
-    call append(line("$")," * ===============================================================================")
+    call append(line("$")," * =========================================================================")
     call append(line("$")," */")
     call append(line("$"),"")
   endfunc
