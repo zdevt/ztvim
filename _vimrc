@@ -184,6 +184,7 @@
   inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
   
   nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+  nnoremap <leader>jf :YcmCompleter GoToInclude<CR>
 "}
 
 "TagBar 
