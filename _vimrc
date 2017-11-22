@@ -302,7 +302,7 @@
 "{
   let python_highlight_all=1
 
-  autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.sh exec ":call SetTitle()"
+  autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.sh,*.lua exec ":call SetTitle()"
 
   func SetFileHeader()
     call append(line("$"),"/*")
@@ -362,6 +362,7 @@
     call append(line("$"),"#include <stdint.h>")
     call append(line("$"),"#include <stddef.h>")
     call append(line("$"),"#include <errno.h>")
+    call append(line("$"),"#include <unistd.h>")
   endfunc
 
   func SetCppInclude()
@@ -394,6 +395,22 @@
     call append(line("$"),"")
   endfunc
 
+  func SetCommitLua()
+    call append(line("$"),"--       FileName:  ".expand("%:t"))
+    call append(line("$"),"--")
+    call append(line("$"),"--    Description:")
+    call append(line("$"),"--")
+    call append(line("$"),"--        Version:  1.0")
+    call append(line("$"),"--        Created:  ".strftime("%Y-%m-%d %T"))
+    call append(line("$"),"--  Last Modified:  TIMESTAMP")
+    call append(line("$"),"--       Revision:  none")
+    call append(line("$"),"--       Compiler:  gcc")
+    call append(line("$"),"--")
+    call append(line("$"),"--         Author:  zt ()")
+    call append(line("$"),"--   Organization:")
+    call append(line("$"),"")
+  endfunc
+
   func SetTitle()
     if expand("%:e") == 'c' 
       call SetFileHeader()
@@ -414,6 +431,9 @@
     elseif expand("%:e") == 'h'
       call SetFileHeader()
       call SetIncludeFileBody()
+    elseif expand("%:e") == 'lua'
+      call setline(1,"#!/usr/local/bin/lua")
+      call SetCommitLua()
     endif
   endfunc 
 
