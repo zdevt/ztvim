@@ -55,6 +55,8 @@
   Plugin 'kien/ctrlp.vim'
   "complete code
   Plugin 'Valloric/YouCompleteMe'
+  "<leader>y
+  Plugin 'rdnetto/YCM-Generator'
   "<leader><leader>w
   Plugin 'easymotion/vim-easymotion'
   "L H
@@ -77,7 +79,6 @@
   "check c code
   Plugin 'vim-syntastic/syntastic'
   "Plugin 'vim-scripts/DoxygenToolkit.vim'
-  Plugin 'rdnetto/YCM-Generator'
   Plugin 'octol/vim-cpp-enhanced-highlight'
 
   "Plugin 'terryma/vim-multiple-cursors'
