@@ -80,6 +80,8 @@
   Plugin 'vim-syntastic/syntastic'
   "Plugin 'vim-scripts/DoxygenToolkit.vim'
   Plugin 'octol/vim-cpp-enhanced-highlight'
+  Plugin 'xolox/vim-misc'
+  Plugin 'xolox/vim-lua-ftplugin'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
@@ -287,6 +289,10 @@
   let g:syntastic_check_on_wq = 0
 "}
 
+" vim-lua-ftplugin'
+"{
+  let g:lua_compiler_name = '/usr/local/bin/luac' 
+"}
 
 "DoxygenToolkit
 "{
