@@ -176,6 +176,8 @@
   let g:ycm_min_num_of_chars_for_completion=2
   let g:ycm_seed_identifiers_with_syntax=1
   "let g:ycm_show_diagnostics_ui = 0
+  let g:ycm_error_symbol='E>'
+  let g:ycm_warning_symbol='W>'
 
   set completeopt=longest,menu 
 
@@ -188,7 +190,8 @@
   inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
   
   nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-  nnoremap <leader>jf :YcmCompleter GoToInclude<CR>
+  nnoremap <leader>jj :YcmDiags<CR>
+  "nnoremap <leader>jf :YcmCompleter GoToInclude<CR>
 "}
 
 "TagBar 
