@@ -5,7 +5,7 @@
 
   let mapleader="," 
 
-  set autochdir
+  "set autochdir
   set autoread
   set autowriteall
 
