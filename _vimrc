@@ -313,7 +313,7 @@
 "{
   let python_highlight_all=1
 
-  autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.sh,*.lua exec ":call SetTitle()"
+  autocmd BufNewFile *.py,*.c,*.cpp,*.h,*.hpp,*.sh,*.lua exec ":call SetTitle()"
 
   func SetFileHeader()
     call append(line("$"),"/*")
@@ -440,6 +440,9 @@
       call SetCppInclude()
       call SetCMain()
     elseif expand("%:e") == 'h'
+      call SetFileHeader()
+      call SetIncludeFileBody()
+    elseif expand("%:e") == 'hpp'
       call SetFileHeader()
       call SetIncludeFileBody()
     elseif expand("%:e") == 'lua'
