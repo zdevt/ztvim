@@ -356,6 +356,7 @@
   func SetCMain()
     call append(line("$"),"")
     call append(line("$"),"")
+    call append(line("$"),"#ifdef TEST")
     call append(line("$"),"int main(int argc, char* argv[])")
     call append(line("$"),"{")
     call append(line("$"),"  (void)argc;")
@@ -364,6 +365,7 @@
     call append(line("$"),"")
     call append(line("$"),"  return 0;")
     call append(line("$"),"}")
+    call append(line("$"),"#endif")
     call append(line("$"),"")
   endfunc
 
