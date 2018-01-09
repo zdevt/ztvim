@@ -356,7 +356,6 @@
   func SetCMain()
     call append(line("$"),"")
     call append(line("$"),"")
-    call append(line("$"),"#ifdef TEST")
     call append(line("$"),"int main(int argc, char* argv[])")
     call append(line("$"),"{")
     call append(line("$"),"  (void)argc;")
@@ -365,7 +364,6 @@
     call append(line("$"),"")
     call append(line("$"),"  return 0;")
     call append(line("$"),"}")
-    call append(line("$"),"#endif")
     call append(line("$"),"")
   endfunc
 
@@ -374,8 +372,13 @@
     call append(line("$"),"#include <stdlib.h>")
     call append(line("$"),"#include <stdint.h>")
     call append(line("$"),"#include <stddef.h>")
+    call append(line("$"),"#include <string.h>")
+    call append(line("$"),"#include <signal.h>")
     call append(line("$"),"#include <errno.h>")
     call append(line("$"),"#include <unistd.h>")
+    call append(line("$"),"#include <netinet/in.h>")
+    call append(line("$"),"#include <arpa/inet.h>")
+    call append(line("$"),"#include <sys/socket.h>")
   endfunc
 
   func SetCppInclude()
@@ -384,7 +387,9 @@
     call append(line("$"),"#include <memory>")
     call append(line("$"),"#include <algorithm>")
     call append(line("$"),"#include <vector>")
+    call append(line("$"),"#include <thread>")
     call append(line("$"),"#include <map>")
+    call append(line("$"),"#include <list>")
     call append(line("$"),"#include <string>")
   endfunc
 
