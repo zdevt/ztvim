@@ -391,6 +391,7 @@
     call append(line("$"),"#include <map>")
     call append(line("$"),"#include <list>")
     call append(line("$"),"#include <string>")
+    call append(line("$"),"#include <functional>")
   endfunc
 
   func SetIncludeFileBody()
