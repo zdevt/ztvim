@@ -388,6 +388,7 @@
     call append(line("$"),"#include <algorithm>")
     call append(line("$"),"#include <vector>")
     call append(line("$"),"#include <thread>")
+    call append(line("$"),"#include <mutex>")
     call append(line("$"),"#include <map>")
     call append(line("$"),"#include <list>")
     call append(line("$"),"#include <string>")
