@@ -151,7 +151,6 @@
   "git config --global mergetool.prompt false
 "}
 
-
 "ctrlp
 "{
   let g:ctrlp_map='<c-p>'
@@ -297,6 +296,10 @@
 " vim-lua-ftplugin'
 "{
   let g:lua_compiler_name = '/usr/local/bin/luac' 
+  let g:lua_check_syntax = 1
+  let g:lua_complete_omni = 1
+  let g:lua_define_completefunc = 1
+  let g:lua_define_omnifunc = 1
 "}
 
 "DoxygenToolkit
