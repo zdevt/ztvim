@@ -82,6 +82,7 @@
   Plugin 'octol/vim-cpp-enhanced-highlight'
   Plugin 'xolox/vim-misc'
   Plugin 'xolox/vim-lua-ftplugin'
+  Plugin 'raymond-w-ko/vim-lua-indent'
 
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
