@@ -9,6 +9,7 @@ SYSTYPE=`uname`
 sudo rm -rf ~/.vim*
 sudo ln -s $PWD/_vimrc ~/.vimrc
 sudo ln -s $PWD/_vim ~/.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 sudo chmod +x astyle_sh
 sudo \cp ./astyle_sh ~/.vim/astyle_sh
