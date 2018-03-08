@@ -89,6 +89,8 @@
   "Plugin 'python.vim'
   "Plugin 'powerline/fonts'
   "Plugin 'powerline/powerline'
+  "Cocos2d-Lua
+  Plugin 'u0u0/vim-quick-community'
 
   Plugin 'vim-scripts/indentpython.vim'
   Plugin 'plasticboy/vim-markdown'
@@ -126,9 +128,9 @@
   func! CompileRun()
     exec "w"
     if &filetype == 'c'
-      exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
+      exec "!time g++ % -g -o %< -std=c++11 -ldl -lpthread"
     elseif &filetype == 'cpp'
-      exec "!time g++ % -g -o %< -std=c++11 -ldl -lrt -lpthread"
+      exec "!time g++ % -g -o %< -std=c++11 -ldl -lpthread"
     elseif &filetype == 'python'
       exec "!time python3 %"
     endif
