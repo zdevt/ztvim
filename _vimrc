@@ -90,7 +90,7 @@
   "Plugin 'powerline/fonts'
   "Plugin 'powerline/powerline'
   "Cocos2d-Lua
-  Plugin 'u0u0/vim-quick-community'
+  "Plugin 'u0u0/vim-quick-community'
 
   Plugin 'vim-scripts/indentpython.vim'
   Plugin 'plasticboy/vim-markdown'
@@ -256,9 +256,9 @@
   let g:timestamp_rep = ' %Y-%m-%d %T'
 "}
 
-" vim cocos lua
+" vim-quick-community vim cocos lua
 "{
-  let g:cocos2dx_diction_location = '~/.vim/bundle/vim-quick-cocos2d-x/key-dict'
+  let g:cocos2dx_diction_location = '~/.vim/bundle/vim-quick-community/key-dict'
 "}
 
 " powerline
