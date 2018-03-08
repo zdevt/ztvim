@@ -256,6 +256,11 @@
   let g:timestamp_rep = ' %Y-%m-%d %T'
 "}
 
+" vim cocos lua
+"{
+  let g:cocos2dx_diction_location = '~/.vim/bundle/vim-quick-cocos2d-x/key-dict'
+"}
+
 " powerline
 "{
   "set guifont=PowerlineSymbols\ for\ Powerline 
