@@ -84,6 +84,8 @@
   Plugin 'xolox/vim-lua-ftplugin'
   Plugin 'raymond-w-ko/vim-lua-indent'
 
+  Plugin 'spin6lock/vim_sproto'
+
   "Plugin 'terryma/vim-multiple-cursors'
   "Plugin 'mileszs/ack.vim'
   "Plugin 'python.vim'
@@ -201,6 +203,13 @@
 "TagBar 
 "{
   nnoremap <silent> <leader>tt :TagbarToggle<CR>
+"}
+
+"sproto.vim
+"{
+augroup filetype
+  au! BufRead,BufNewFile *.sproto setfiletype sproto
+augroup end
 "}
 
 
