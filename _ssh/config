@@ -1,0 +1,29 @@
+Host A
+  HostName 39.108.167.69
+  User zt 
+  IdentityFile ~/.ssh/id_rsa
+
+Host M
+  HostName 192.168.218.128
+  User macv
+  IdentityFile ~/.ssh/id_rsa
+
+Host U
+  HostName 192.168.218.129
+  User devz
+  IdentityFile ~/.ssh/id_rsa
+
+Host Z
+  HostName 192.168.18.180
+  User test
+  IdentityFile ~/.ssh/id_rsa
+
+Host V 
+  HostName 192.1.2.12
+  #HostName 113.108.164.83
+  User zt 
+  IdentityFile ~/.ssh/id_rsa
+
+
+ServerAliveInterval 60
+
