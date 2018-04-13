@@ -269,7 +269,7 @@ augroup end
 
 " vim-quick-community vim cocos lua
 "{
-  let g:cocos2dx_diction_location = '~/.vim/bundle/vim-quick-community/key-dict'
+"let g:cocos2dx_diction_location = '~/.vim/bundle/vim-quick-community/key-dict'
 "}
 
 " powerline
@@ -484,4 +484,12 @@ augroup end
 
 "}
 "auto add source code header --end  
+
+"bash color 
+".bash_profile
+"export CLICOLOR=1
+"export LSCOLORS=gxfxaxdxcxegedabagacad
+"export GREP_OPTIONS='--color=auto'
+"export TERM="xterm-color"
+"PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 
