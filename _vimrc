@@ -1,3 +1,4 @@
+set encoding=utf-8
 " vim config
 "{
   set nocompatible
