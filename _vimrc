@@ -105,6 +105,8 @@ set encoding=utf-8
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'tpope/vim-fugitive'
+  "rosvim
+  Plugin 'taketwo/vim-ros'
 
   call vundle#end()
   filetype plugin indent on
