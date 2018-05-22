@@ -135,7 +135,7 @@ set encoding=utf-8
     elseif &filetype == 'cpp'
       exec "!time g++ % -g -o %< -std=c++11 -ldl -lpthread"
     elseif &filetype == 'python'
-      exec "!time python3 %"
+      exec "!time python %"
     elseif &filetype == 'lua'
       exec "!time lua %"
     endif
