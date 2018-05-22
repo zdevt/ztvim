@@ -105,6 +105,8 @@ set encoding=utf-8
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'tpope/vim-fugitive'
+  "rosvim
+  Plugin 'taketwo/vim-ros'
 
   call vundle#end()
   filetype plugin indent on
@@ -135,7 +137,7 @@ set encoding=utf-8
     elseif &filetype == 'cpp'
       exec "!time g++ % -g -o %< -std=c++11 -ldl -lpthread"
     elseif &filetype == 'python'
-      exec "!time python3 %"
+      exec "!time python %"
     elseif &filetype == 'lua'
       exec "!time lua %"
     endif
