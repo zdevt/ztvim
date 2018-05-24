@@ -107,6 +107,8 @@ set encoding=utf-8
   Plugin 'tpope/vim-fugitive'
   "rosvim
   Plugin 'taketwo/vim-ros'
+  "python 
+  Plugin 'davidhalter/jedi-vim'
 
   call vundle#end()
   filetype plugin indent on
