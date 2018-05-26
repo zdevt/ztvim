@@ -5,7 +5,6 @@ filename=$1
 if   [ "${filename#*.}" = "c" ] || [ "${filename#*.}" = "cpp" ] \
   || [ "${filename#*.}" = "h" ] || [ "${filename#*.}" = "hpp" ] ;
 then
-#/bin/astyle -cs2CSKNwYMm2pPDHk1n $filename  >/dev/null
 	~/.vim/astyle --style=allman \
 			 				--indent=spaces=2 \
 			 				--indent-modifiers \
@@ -27,6 +26,10 @@ then
 			 				--suffix=none \
 			 				--formatted \
 			 				$filename >/dev/null
+elif [ "${filename#*.}" = "py" ] 
+then
+  ~/.vim/PythonTidy.py $filename $filename
+  echo "python"
 fi
 
 #--delete-empty-lines \
