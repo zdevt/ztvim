@@ -148,7 +148,7 @@ set encoding=utf-8
 
 "format code
 "{
-  nmap <leader>f :!~/.vim/astyle_sh % <CR>
+  nmap F :!~/.vim/astyle_sh % <CR>
 "}
 
 "UndoTree 
