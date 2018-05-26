@@ -29,7 +29,6 @@ then
 elif [ "${filename#*.}" = "py" ] 
 then
   ~/.vim/PythonTidy.py $filename $filename
-  echo "python"
 fi
 
 #--delete-empty-lines \
