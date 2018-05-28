@@ -130,7 +130,7 @@ set encoding=utf-8
 "{
   "make
   nmap M :make<CR>
-  nnoremap <leader>r :call CompileRun()<CR>
+  nnoremap <leader><leader>r :call CompileRun()<CR>
 
   func! CompileRun()
     exec "w"
