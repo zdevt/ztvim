@@ -26,9 +26,9 @@ then
 			 				--suffix=none \
 			 				--formatted \
 			 				$filename >/dev/null
-elif [ "${filename#*.}" = "py" ] 
-then
-  ~/.vim/PythonTidy.py $filename $filename
+#elif [ "${filename#*.}" = "py" ] 
+#then
+  #~/.vim/PythonTidy.py $filename $filename
 fi
 
 #--delete-empty-lines \

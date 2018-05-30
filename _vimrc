@@ -151,6 +151,7 @@ set encoding=utf-8
 "format code
 "{
   nmap F :!~/.vim/astyle_sh % <CR>
+  nmap <leader>f :call yapf#YAPF()<CR>
 "}
 
 "UndoTree 
