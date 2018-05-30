@@ -150,8 +150,15 @@ set encoding=utf-8
 
 "format code
 "{
-  nmap F :!~/.vim/astyle_sh % <CR>
-  nmap <leader>f :call yapf#YAPF()<CR>
+  nmap F :call FormatCode()<CR>
+
+  func! FormatCode()
+    if &filetype == 'python'
+      exec "YAPF"
+    else
+      exec "!~/.vim/astyle_sh %"
+    endif
+  endfunc
 "}
 
 "UndoTree 
