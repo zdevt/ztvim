@@ -109,6 +109,8 @@ set encoding=utf-8
   Plugin 'taketwo/vim-ros'
   "python 
   Plugin 'davidhalter/jedi-vim'
+  "python format
+  Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
   call vundle#end()
   filetype plugin indent on
