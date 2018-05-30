@@ -154,6 +154,7 @@ set encoding=utf-8
 
   func! FormatCode()
     if &filetype == 'python'
+      exec "!chmod +x %"
       exec "YAPF"
     else
       exec "!~/.vim/astyle_sh %"
