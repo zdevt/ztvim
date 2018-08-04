@@ -29,6 +29,7 @@ set encoding=utf-8
   set nu
   set foldmethod=indent
   set foldlevel=99
+  "let g:pymode_rope=0
 "}
 
 "code format
@@ -95,8 +96,11 @@ set encoding=utf-8
   "Cocos2d-Lua
   "Plugin 'u0u0/vim-quick-community'
 
-  Plugin 'vim-scripts/indentpython.vim'
+  "Plugin 'vim-scripts/indentpython.vim'
   Plugin 'plasticboy/vim-markdown'
+  Plugin 'suan/vim-instant-markdown'
+  "Plugin 'isnowfy/python-vim-instant-markdown'
+
   Plugin 'MarcWeber/vim-addon-mw-utils'
   Plugin 'tomtom/tlib_vim'
   Plugin 'garbas/vim-snipmate'
