@@ -1,7 +1,3 @@
-cd ~
-
-git clone https://github.com/zdevt/ztvim.git
-
 cd ztvim
 
 ./install.sh
