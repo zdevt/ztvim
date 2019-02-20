@@ -110,7 +110,7 @@ set encoding=utf-8
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'tpope/vim-fugitive'
   "rosvim
-  Plugin 'taketwo/vim-ros'
+  "Plugin 'taketwo/vim-ros'
   "python 
   Plugin 'davidhalter/jedi-vim'
   "python format
@@ -419,12 +419,12 @@ augroup end
     call append(line("$"),"#include <stdint.h>")
     call append(line("$"),"#include <stddef.h>")
     call append(line("$"),"#include <string.h>")
-    call append(line("$"),"#include <signal.h>")
+    "call append(line("$"),"#include <signal.h>")
     call append(line("$"),"#include <errno.h>")
     call append(line("$"),"#include <unistd.h>")
-    call append(line("$"),"#include <netinet/in.h>")
-    call append(line("$"),"#include <arpa/inet.h>")
-    call append(line("$"),"#include <sys/socket.h>")
+    "call append(line("$"),"#include <netinet/in.h>")
+    "call append(line("$"),"#include <arpa/inet.h>")
+    "call append(line("$"),"#include <sys/socket.h>")
   endfunc
 
   func SetCppInclude()
@@ -439,6 +439,8 @@ augroup end
     call append(line("$"),"#include <list>")
     call append(line("$"),"#include <string>")
     call append(line("$"),"#include <functional>")
+    call append(line("$"),"")
+    call append(line("$"),"using namespace std;")
   endfunc
 
   func SetIncludeFileBody()
