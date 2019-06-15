@@ -112,6 +112,7 @@ set encoding=utf-8
   "rosvim
   "Plugin 'taketwo/vim-ros'
   "python 
+  Plugin 'w0rp/ale'
   Plugin 'davidhalter/jedi-vim'
   "python format
   Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
