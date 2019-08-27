@@ -492,7 +492,7 @@ augroup end
       call SetCommitSh()
     elseif expand("%:e") == 'py'
       call setline(1,"#!/usr/bin/env python")
-      call append(line("$"),"#-*- coding:utf-8 -*-")
+      call append(line("$"),"# -*- coding:utf-8 -*-")
       call SetCommitSh()
     elseif expand("%:e") == 'cpp'
       call SetFileHeader()
