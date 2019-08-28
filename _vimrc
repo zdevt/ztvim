@@ -109,13 +109,16 @@ set encoding=utf-8
   Plugin 'vim-scripts/OmniCppComplete'
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'tpope/vim-fugitive'
+
   "rosvim
   "Plugin 'taketwo/vim-ros'
-  "python 
-  Plugin 'w0rp/ale'
+  
+  "python  check
+  "Plugin 'w0rp/ale'
+  "python autocomplete 
   Plugin 'davidhalter/jedi-vim'
   "python format
-  Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+  Plugin 'sillybun/autoformatpythonstatement'
 
   call vundle#end()
   filetype plugin indent on
@@ -158,12 +161,7 @@ set encoding=utf-8
   nmap F :call FormatCode()<CR>
 
   func! FormatCode()
-    if &filetype == 'python'
-      exec "!chmod +x %"
-      exec "YAPF"
-    else
-      exec "!~/.vim/astyle_sh %"
-    endif
+    exec "!~/.vim/astyle_sh %"
   endfunc
 "}
 
@@ -232,11 +230,15 @@ set encoding=utf-8
 
 "sproto.vim
 "{
-augroup filetype
+  augroup filetype
   au! BufRead,BufNewFile *.sproto setfiletype sproto
 augroup end
 "}
 
+"autoformatpythonstatement
+"{
+  autocmd FileType python let g:autoformatpython_enabled = 1
+"}
 
 "ctags cscope
 "{
