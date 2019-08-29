@@ -88,14 +88,6 @@ set encoding=utf-8
 
   Plugin 'spin6lock/vim_sproto'
 
-  "Plugin 'terryma/vim-multiple-cursors'
-  "Plugin 'mileszs/ack.vim'
-  "Plugin 'python.vim'
-  "Plugin 'powerline/fonts'
-  "Plugin 'powerline/powerline'
-  "Cocos2d-Lua
-  "Plugin 'u0u0/vim-quick-community'
-
   "Plugin 'vim-scripts/indentpython.vim'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'suan/vim-instant-markdown'
@@ -110,9 +102,6 @@ set encoding=utf-8
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'tpope/vim-fugitive'
 
-  "rosvim
-  "Plugin 'taketwo/vim-ros'
-  
   "python  check
   "Plugin 'w0rp/ale'
   "python autocomplete 
@@ -328,6 +317,8 @@ augroup end
   set statusline+=%*
 
   let g:syntastic_python_checkers=['flake8']
+  "let g:syntastic_python_checker_args='--ignore=E501,W601'
+  let g:syntastic_python_flake8_args='--ignore=E501'
   
   let g:syntastic_cpp_compiler='clang++'
   let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
