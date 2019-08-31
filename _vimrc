@@ -105,7 +105,7 @@ set encoding=utf-8
   "python  check
   "Plugin 'w0rp/ale'
   "python autocomplete 
-  Plugin 'davidhalter/jedi-vim'
+  "Plugin 'davidhalter/jedi-vim'
   "python format
   Plugin 'sillybun/autoformatpythonstatement'
 
