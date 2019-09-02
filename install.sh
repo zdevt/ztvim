@@ -9,18 +9,11 @@ ln -s $PWD/_vim ~/.vim
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-chmod +x ./_vim/PythonTidy.py
 chmod +x ./_vim/astyle_sh
 
 if [ $SYSTYPE = "Linux" ];
 then 
   chmod +x astyle
   \cp ./astyle ~/.vim/astyle
-elif [ $SYSTYPE = "Darwin" ];
-then 
-  chmod +x astyle_mac
-  \cp ./astyle_mac ~/.vim/astyle
-else 
-  echo "Linux"
 fi
 

@@ -2,30 +2,38 @@
 
 filename=$1
 
+SYSTYPE=`uname`
+
+if [ $SYSTYPE = "Linux" ];
+then 
+  AST=~/.vim/astyle
+else
+  AST=astyle
+fi
+
 if   [ "${filename#*.}" = "c" ] || [ "${filename#*.}" = "cpp" ] \
   || [ "${filename#*.}" = "h" ] || [ "${filename#*.}" = "hpp" ] ;
 then
-	~/.vim/astyle --style=allman \
-			 				--indent=spaces=2 \
-			 				--indent-modifiers \
-							--indent-classes \
-			 				--indent-switches \
-			 				--indent-namespaces \
-			 				--indent-preproc-block \
-			 				--indent-preproc-define \
-			 				--indent-preproc-cond \
-			 				--indent-col1-comments \
-			 				--min-conditional-indent=2 \
-			 				--max-instatement-indent=40 \
-			 				--break-blocks \
-							--pad-oper \
-			 				--pad-paren \
-							--pad-paren-in \
-			 				--align-pointer=type \
-			 				--align-reference=type \
-			 				--suffix=none \
-			 				--formatted \
-			 				$filename >/dev/null
+	#~/.vim/astyle --style=allman \
+	$AST --style=allman \
+    --indent=spaces=2 \
+    --indent-modifiers \
+    --indent-classes \
+    --indent-switches \
+    --indent-namespaces \
+    --indent-preproc-block \
+    --indent-preproc-define \
+    --indent-preproc-cond \
+    --indent-col1-comments \
+    --min-conditional-indent=2 \
+    --max-instatement-indent=40 \
+    --break-blocks \
+    --pad-oper \
+    --pad-paren \
+    --pad-paren-in \
+    --align-pointer=type \
+    --align-reference=type \
+    --suffix=none \
+    --formatted \
+    $filename >/dev/null
 fi
-
-
