@@ -14,7 +14,6 @@ fi
 if   [ "${filename#*.}" = "c" ] || [ "${filename#*.}" = "cpp" ] \
   || [ "${filename#*.}" = "h" ] || [ "${filename#*.}" = "hpp" ] ;
 then
-	#~/.vim/astyle --style=allman \
 	$AST --style=allman \
     --indent=spaces=2 \
     --indent-modifiers \

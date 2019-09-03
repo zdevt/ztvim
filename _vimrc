@@ -6,7 +6,7 @@ set encoding=utf-8
 
   let mapleader="," 
 
-  "set autochdir
+  set autochdir
   set autoread
   set autowriteall
 
