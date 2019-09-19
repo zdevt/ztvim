@@ -221,7 +221,7 @@ set encoding=utf-8
 "{
   augroup filetype
   au! BufRead,BufNewFile *.sproto setfiletype sproto
-augroup end
+  augroup end
 "}
 
 "autoformatpythonstatement
@@ -318,7 +318,7 @@ augroup end
 
   let g:syntastic_python_checkers=['flake8']
   "let g:syntastic_python_checker_args='--ignore=E501,W601'
-  let g:syntastic_python_flake8_args='--ignore=E501'
+  let g:syntastic_python_flake8_args='--ignore=E501,F401,E402'
   
   let g:syntastic_cpp_compiler='clang++'
   let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
