@@ -56,7 +56,7 @@ set encoding=utf-8
   "<c-p>
   Plugin 'kien/ctrlp.vim'
   "complete code
-  Plugin 'Valloric/YouCompleteMe'
+  Plugin 'ycm-core/YouCompleteMe'
   "<leader>y
   Plugin 'rdnetto/YCM-Generator'
   "<leader><leader>w
@@ -318,7 +318,7 @@ set encoding=utf-8
 
   let g:syntastic_python_checkers=['flake8']
   "let g:syntastic_python_checker_args='--ignore=E501,W601'
-  let g:syntastic_python_flake8_args='--ignore=E501,F401,E402'
+  let g:syntastic_python_flake8_args='--ignore=E501,F401,E402,W504,W391'
   
   let g:syntastic_cpp_compiler='clang++'
   let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
