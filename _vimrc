@@ -105,7 +105,7 @@ set encoding=utf-8
   "python  check
   "Plugin 'w0rp/ale'
   "python autocomplete 
-  "Plugin 'davidhalter/jedi-vim'
+  Plugin 'davidhalter/jedi-vim'
   "python format
   Plugin 'sillybun/autoformatpythonstatement'
 
@@ -302,6 +302,10 @@ set encoding=utf-8
   let g:airline_theme='simple'
 "}
 
+" jedi-vim
+" {
+" }
+
 " tabular
 "{
   nmap <leader>a= :Tabularize /=<CR>
@@ -318,7 +322,7 @@ set encoding=utf-8
 
   let g:syntastic_python_checkers=['flake8']
   "let g:syntastic_python_checker_args='--ignore=E501,W601'
-  let g:syntastic_python_flake8_args='--ignore=E501,F401,E402,W504,W391'
+  let g:syntastic_python_flake8_args='--ignore=E114,E501,F401,E402,W504,W391,E201,E202,E203,F841,E116,E117'
   
   let g:syntastic_cpp_compiler='clang++'
   let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
